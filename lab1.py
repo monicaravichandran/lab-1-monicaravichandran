@@ -1,11 +1,11 @@
 import unittest
-# * Section 1 (Git)
+#* Section 1 (Git)
 #persnickety
 
 
-# * Section 2 (Data Definitions)
+#* Section 2 (Data Definitions)
 
-# * 1)
+#* 1)
 # a Celsius is a float representing temperature in Celsius
 # a Fahrenheit is a float representing temperature in Fahrenheit and is what is outputted after calculations
 class Celsius:
@@ -37,10 +37,10 @@ def get_temp():
     print(f)
 
 
-# * 2)
+#* 2)
 # a price is an int representing the price/cost amount for various items in a store in cents
 
-# * 3)
+#* 3)
 # a PriceRecord represents the price record for the store and has an item name and a price
 # an item name is a string representing the name of the item in the PriceRecord
 # a price is an int representing the price/dollar amount for various items in a store in cents
@@ -56,7 +56,7 @@ class PriceRecord:
         return "PriceRecord(%r,%r)" % (self.item, self.price)
 
 
-# * 4)
+#* 4)
 # an OpenTab represents an web browser that contains the URL and the most recent date it was loaded
 # a Url represents a string containing the webname URL of the web browser
 # a Date is a string of the most recent date the Url was accessed in the format of "xx/xx/xxxx" (month/day/year))
@@ -84,46 +84,46 @@ class Date:
         return "Date(%r/%r/%r)" % (self.month, self.day, self.year)
 
 
-# * Section 3 (Signature, Purpose Statements, Headers)
+#* Section 3 (Signature, Purpose Statements, Headers)
 
-# * 1)
+#* 1)
 # Signature: int float --> int
 # Purpose Statement: returns the price added to the respective sales tax that was inputted along with the original price
 def get_tax_price(price, tax):
     pass
 
-# * 2)
+#* 2)
 # Signature: database string --> int
 # Purpose Statement: returns the price for a named item in a store's database after finding the inputted item name string in the database.
 def get_price(item_name):
     pass
 
-# * 3)
+#* 3)
 # Signature: database string --> int
 # Purpose Statement: returns the median income in a given geographic region using a database as input
 def get_med_income(region):
     pass
 
-# * 4)
+#* 4)
 # Signature: database string --> list of strings
 # Purpose Statement: returns a list of string cities which overlap in the geographic region provided
 def get_cities(geo_region):
     pass
 
-# * Section 4 (Test Cases)
+#* Section 4 (Test Cases)
 
-# * 1)
+#* 1)
 # Signature: float float float --> float
 # Purpose Statement: returns the second largest float of the 3 inputted floats given
 def get_second_largest(num1,num2,num3):
     pass
 
-# * 2)
+#* 2)
 # Signature: string --> boolean
 # Purpose Statement: returns a boolean of True if the string inputted has no capital letters and False otherwise
 def check_capital(word):
     pass
-# * 3)
+#* 3)
 # Signature: string string --> string
 # Purpose Statement: returns the northernmost state (in relation to the north pole) of the two states provided/inputted
 
@@ -157,16 +157,16 @@ class TestCases1(unittest.TestCase):
         self.assertEqual(get_furthest_north("Alaska", "California"), "Alaska")
 
 
-# * Section 5 (Whole Functions)
+#* Section 5 (Whole Functions)
 
-# * 1)
+#* 1)
 # Signature: float/int --> float
 # Purpose Statement: returns the amount of feet in meters
 def f2m(feet):
     meter = feet/3.28 # feet represent the inputted feet
     return float("%.3f" % meter) # meter represents the amount of feet in meters formatted to the 3rd decimal
 
-# * 2)
+#* 2)
 # MusicalNote represents a musical note in a musical record and has pitch and duration
 
 class MusicalNote:
@@ -178,7 +178,7 @@ class MusicalNote:
     def __repr__(self):
         return "MusicalNote(%r,%r)" % (self.duration, self.pitch)
 
-# * 3)
+#* 3)
 # note is a MusicalNote representing a musical note that has a pitch (frequency in Hz) and a duration in seconds
 # Signature: MusicalNote --> MusicalNote
 # Purpose Statement: returns a new note that is higher by one octave meaning its frequency has doubled
@@ -186,7 +186,7 @@ def up_one_octave(note):
     newNote = MusicalNote(note.duration, (note.pitch)*2)
     return newNote # is a MusicalNote that has the same duration as the inputted note but a frequency that has been doubled
 
-# * 4)
+#* 4)
 # note is a MusicalNote representing a musical note that has a pitch (frequency in Hz) and a duration in seconds
 # Signature: MusicalNote --> None
 # Purpose Statement: returns None after doubling the frequency of the inputted MusicalNote
